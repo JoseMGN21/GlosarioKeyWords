@@ -2,12 +2,10 @@ package src;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Scanner;
 
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 public class Input {
