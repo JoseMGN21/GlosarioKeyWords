@@ -1,7 +1,5 @@
 package src;
 
-import java.util.Scanner;
-
 public class MasterControl{
     public static Lines outputLines;
     public static Lines inputLines;
