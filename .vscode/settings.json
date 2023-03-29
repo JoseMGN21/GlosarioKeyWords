@@ -1,6 +1,6 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\chepe\\Downloads\\pdfbox-app-3.0.0-alpha3.jar"
+        "resources/pdfbox-app-3.0.0-alpha3.jar"
     ]
 }
