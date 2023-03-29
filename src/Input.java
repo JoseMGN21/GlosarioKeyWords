@@ -19,8 +19,10 @@ public class Input {
         File file = new File(rutaArchivo);
         try {
         PDDocument doc1 = Loader.loadPDF(file);
-            for (int i = 1; i < doc1.getNumberOfPages(); i++) {
+            for (int i = 1; i <= doc1.getNumberOfPages(); i++) {
+                inputLines.page = i;
                 inputLines.storageLines(textStripper(doc1, i));
+                inputLines.clearLines();
             }
         }
         catch (IOException e) {

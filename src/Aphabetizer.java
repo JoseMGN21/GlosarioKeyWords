@@ -6,7 +6,7 @@ public class Aphabetizer implements IChangeObserver {
    
     @Override
     public void notifyListener(Lines changedLine) {
-        if(changedLine.name == "shiftedLines"){
+        if(changedLine.name == "outputLines"){
             organizeLines(changedLine.getLines());
         }
     }

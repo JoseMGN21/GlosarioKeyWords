@@ -21,6 +21,7 @@ public class MasterControl{
 
         Input input = new Input();
         input.readText(keywordLines, "resources/keyWords.txt");
+        input.readText(outputLines, "resources/keyWords.txt");
         chooseInputType(input);
 
         
