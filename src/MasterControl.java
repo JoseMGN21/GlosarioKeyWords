@@ -3,30 +3,30 @@ package src;
 import java.util.Scanner;
 
 public class MasterControl{
-    public static Lines shiftedLines;
+    public static Lines outputLines;
     public static Lines inputLines;
     public static Lines keywordLines;
 
     public static void main(String[] args) {
         inputLines = new Lines("inputLines");
-        shiftedLines = new Lines("shiftedLines");
+        outputLines = new Lines("outputLines");
         keywordLines = new Lines("keywordLines");
 
         IChangeObserver shift = new KeywordFinder();
         IChangeObserver order = new Aphabetizer();
 
         inputLines.addChangeObservers(shift);
-        shiftedLines.addChangeObservers(order);
+        outputLines.addChangeObservers(order);
         
 
         Input input = new Input();
-        input.readText(keywordLines, "src/keywords.txt");
+        input.readText(keywordLines, "resources/keyWords.txt");
         chooseInputType(input);
 
         
 
         Output output = new Output();
-        output.printLines(shiftedLines);
+        output.printLines(outputLines);
     }
 
     public static void chooseInputType(Input input) {

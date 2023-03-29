@@ -19,9 +19,9 @@ public class Input {
         File file = new File(rutaArchivo);
         try {
         PDDocument doc1 = Loader.loadPDF(file);
-        inputLines.storageLines(textStripper(doc1));
-        //String texto = textStripper(doc1);
-        //System.out.println(texto);
+            for (int i = 1; i < doc1.getNumberOfPages(); i++) {
+                inputLines.storageLines(textStripper(doc1, i));
+            }
         }
         catch (IOException e) {
             System.out.println("Archivo no encontrado");
@@ -55,11 +55,11 @@ public class Input {
         scanner.close();
     }
 
-    public String textStripper(PDDocument doc) throws IOException {
+    public String textStripper(PDDocument doc, int i) throws IOException {
         PDFTextStripper stripper = new PDFTextStripper();
         stripper.setSortByPosition(true);
-        stripper.setStartPage(1);
-        stripper.setEndPage(1);
+        stripper.setStartPage(i);
+        stripper.setEndPage(i);
         return stripper.getText(doc);
     }
 }

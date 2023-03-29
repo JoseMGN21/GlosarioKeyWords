@@ -6,7 +6,7 @@ import java.util.List;
 public class Lines extends TElement {
 
     String name;
-    List<String> lines = new ArrayList<String>();
+    ArrayList<String> lines = new ArrayList<String>();
 
     public Lines(String name) {
         this.name = name;
@@ -21,11 +21,11 @@ public class Lines extends TElement {
         lines.clear();
     }
 
-    public List<String> getLines() {
+    public ArrayList<String> getLines() {
         return lines;
     }
 
-    public void setLines(List<String> lines) {
+    public void setLines(ArrayList<String> lines) {
         this.lines = lines;
     }
     
