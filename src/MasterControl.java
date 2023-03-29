@@ -43,12 +43,12 @@ public class MasterControl{
             case 2:
                 System.out.println("Ingrese el nombre del archivo de texto");
                 String nombreTXT = scanner.next();
-                input.readText(inputLines, "src/" + nombreTXT + ".txt");
+                input.readText(inputLines, "resources/" + nombreTXT + ".txt");
                 break;
             case 3:
                 System.out.println("Ingrese el nombre del archivo PDF");
                 String nombrePDF = scanner.next();
-                input.readPDF(inputLines, "src/" + nombrePDF + ".pdf");
+                input.readPDF(inputLines, "resources/" + nombrePDF + ".pdf");
                 break;
             default:
                 System.out.println("Opción no válida");

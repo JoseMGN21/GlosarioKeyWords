@@ -10,8 +10,9 @@ public class KeywordFinder implements IChangeObserver {
 
     public void wordFinder(Lines inputLines) {
         for (String word : MasterControl.keywordLines.lines) {
-            for (String line : inputLines.lines) {
-                if (line.contains(word)) {
+                if (inputLines.lines.contains(word)) {
+                    int index = MasterControl.keywordLines.lines.indexOf(word);
+                    MasterControl.outputLines.lines()[index] += ", " + page;
                     System.out.println("La palabra " + word + " se encuentra en la línea " + line + " del archivo de entrada");
                 }
             }
