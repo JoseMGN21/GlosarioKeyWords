@@ -65,4 +65,4 @@ classDiagram
     class Output{
         +printLines(Lines lines) void
     }
-    ```
+```
