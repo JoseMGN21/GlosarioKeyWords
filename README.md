@@ -9,8 +9,8 @@ classDiagram
     MasterControl --> TElement
     TElement <|.. Lines
     TElement -->"observes" IChangeObserver
-    IChangeObserver <|.. CircularShift
     IChangeObserver <|.. Alphabetizer
+    IChangeObserver <|.. KeyWordFinder
     MasterControl --> IChangeObserver
     
 
